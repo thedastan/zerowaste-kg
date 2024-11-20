@@ -30,12 +30,11 @@ const HeaderHero = () => {
 	const [selectedService, setSelectedService] = useState("");
 	const router = useRouter();
 
- 
-  // Функция для закрытия меню при клике на элемент
+  
   const closeMenu = () => {
-    setIsOpen(false); // Закрыть меню
+    setIsOpen(false); 
   };
-	 
+	 	
 	const nav = [
 		{
 			name: "Главная",
@@ -201,7 +200,8 @@ const HeaderHero = () => {
 													<option
 														style={{ color: "black" }}
 														key={service.id}
-														value={service.id}>
+														value={service.id}
+														onClick={closeMenu}>
 														{service.title}
 													</option>
 												))}
@@ -219,6 +219,7 @@ const HeaderHero = () => {
 										color="black"
 										w="100%"
 										border="solid 1px grey"
+										onClick={closeMenu}
 										p={4}
 										textAlign="center"
 										textDecor="none">

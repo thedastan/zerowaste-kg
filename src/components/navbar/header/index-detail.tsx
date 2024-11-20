@@ -14,9 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { IoChevronDown, IoClose, IoCloseOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { MdAccessTimeFilled } from "react-icons/md";
-import { FaPhoneAlt } from "react-icons/fa";
-
+ 
 import Image from "next/image";
 
 import logo from "@/assets/img/icon.png";
@@ -31,18 +29,20 @@ const HeaderDetail = () => {
 	const { services_data } = useServicesData();
 	const [selectedService, setSelectedService] = useState("");
 	const router = useRouter();
-	const handleChange = (event: any) => {
-		setSelectedService(event.target.value);
-	};
+ 
+  const closeMenu = () => {
+    setIsOpen(false); 
+  };
+	 
 
 	const nav = [
 		{
 			name: "Главная",
-			path: "#home",
+			path: "/#home",
 		},
 		{
 			name: "О нас",
-			path: "#about",
+			path: "/#about",
 		},
 		{
 			name: "Услуги",
@@ -50,7 +50,7 @@ const HeaderDetail = () => {
 		},
 		{
 			name: "Преимущества",
-			path: "#advantages",
+			path: "/#advantages",
 		},
 		{
 			name: "Контакты",
@@ -200,7 +200,8 @@ const HeaderDetail = () => {
 													<option
 														style={{ color: "black" }}
 														key={service.id}
-														value={service.id}>
+														value={service.id}
+                            onClick={closeMenu}>
 														{service.title}
 													</option>
 												))}
@@ -220,6 +221,7 @@ const HeaderDetail = () => {
 										border="solid 1px grey"
 										p={4}
 										textAlign="center"
+                    onClick={closeMenu}
 										textDecor="none">
 										{el.name}
 									</Link>
