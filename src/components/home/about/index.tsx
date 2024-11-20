@@ -17,15 +17,26 @@ const About = () => {
 		},
 	];
 	return (
-		<Box>
-			
-			<div className="container2">
-				<Flex flexDirection={{ base: "column", md: "row" }} gap={10} justifyContent="space-between">
-					<Box w="100%" p={{ base:"40px 15px", md: "40px 50px"}} borderRadius="17px" bg="#191919" color="white">
+		<Box id="about">
+			<Box className="container2">
+				<Flex
+					flexDirection={{ base: "column", md: "row" }}
+					gap={10}
+					justifyContent="space-between">
+					<Box
+						w="100%"
+						p={{ base: "40px 15px", md: "40px 50px" }}
+						borderRadius="17px"
+						bg="#191919"
+						color="white">
 						<Text fontSize={{ base: 30, md: 52 }} fontWeight={600}>
 							О компании
 						</Text>
-						<Text  mt={4} w={{ base: "100%", md: 540 }} fontSize={18} fontWeight={400}>
+						<Text
+							mt={4}
+							w={{ base: "100%", md: 540 }}
+							fontSize={18}
+							fontWeight={400}>
 							Наша компания с 2014 года занимается производством и установкой
 							комплексных инженерных сооружении в Кыргызстане, а также в странах
 							СНГ и Персидского Залива.
@@ -47,7 +58,7 @@ const About = () => {
 							))}
 						</Flex>
 						<Button
-             mt={8}
+							mt={8}
 							w={330}
 							h="60px"
 							borderRadius={50}
@@ -56,16 +67,31 @@ const About = () => {
 							Оставить заявку
 						</Button>
 					</Box>
-					<Box textAlign="center" borderRadius="17px" p={3} w={{ base:"100%", md: 426}} bg="#ECF4F2">
-						 <Box w={{ base:"100%", md: 340}} h={340} overflow="hidden">
-             <Image style={{width:"100%", height:"100%", objectFit:"cover"}} src={ava} alt="img" />
-             </Box>
-						<Text mt={4} fontSize={22} fontWeight={600}>Максатбек Амангелдиев</Text>
-						<Text mt={2} fontSize={14} fontWeight={300}>Основатель и Ген.Директор</Text>
-						<Text fontSize={14} fontWeight={600}>”Zero Waste”</Text>
+					<Box
+						textAlign="center"
+						borderRadius="17px"
+						p={3}
+						w={{ base: "100%", md: 426 }}
+						bg="#ECF4F2">
+						<Box w={{ base: "100%", md: 340 }} h={340} overflow="hidden">
+							<Image
+								style={{ width: "100%", height: "100%", objectFit: "cover" }}
+								src={ava}
+								alt="img"
+							/>
+						</Box>
+						<Text mt={4} fontSize={22} fontWeight={600}>
+							Максатбек Амангелдиев
+						</Text>
+						<Text mt={2} fontSize={14} fontWeight={300}>
+							Основатель и Ген.Директор
+						</Text>
+						<Text fontSize={14} fontWeight={600}>
+							”Zero Waste”
+						</Text>
 					</Box>
 				</Flex>
-			</div>
+			</Box>
 		</Box>
 	);
 };

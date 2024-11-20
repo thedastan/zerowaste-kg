@@ -22,24 +22,27 @@ import Link from "next/link";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
+ 
 const Map = () => {
-	const nav = [
+	 
+	const nav_map = [
 		{
 			name: "Главная",
-			path: "/",
+			path: "/#home",
 		},
 		{
 			name: "О нас",
-			path: "/",
+			path: "/#about",
 		},
 		{
 			name: "Услуги",
-			path: "/",
+			path: "/#services",
 		},
 		{
 			name: "Преимущества",
-			path: "/",
+			path: "/#advantages",
 		},
+		 
 	];
 
 	const links = [
@@ -66,7 +69,7 @@ const Map = () => {
 	];
 
 	return (
-		<Box bg="#F5F5F5" py={10}>
+		<Box id="map" bg="#F5F5F5" py={10}>
 			<Box
        display={{ base: "flex", md: "none" }}
 				border="solid 1px #EBEBEB"
@@ -201,12 +204,14 @@ const Map = () => {
 								p={{ base: "20px 0", md: "0px 0" }}
 								w={{ base: "189px", md: "470px" }}
 								justifyContent={{ base: "start", md: "space-between" }}>
-								{nav.map((el, index) => (
-									<Flex key={index}>
+								{nav_map.map((el, index) => (
+									 <Link key={index} href={el.path}>
+									 <Flex  >
 										<Text fontSize={16} fontWeight={400}>
 											{el.name}
 										</Text>
 									</Flex>
+									</Link>
 								))}
 							</Flex>
 						</Flex>

@@ -59,7 +59,7 @@ const Advantages = () => {
 		},
 	];
 	return (
-		<Flex
+		<Flex id="advantages"
 			justifyContent="center"
 			alignItems="center"
 			py={20}

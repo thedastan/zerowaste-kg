@@ -7,7 +7,7 @@ import "react-international-phone/style.css";
 const Contact = () => {
   const [phone, setPhone] = useState("");
   return (
-    <Box  pb={20}>
+    <Box   pb={20}>
       <Box className="container">
         <Flex
           bg="#F5F5F5"

@@ -1,6 +1,6 @@
 "use client";
 import Footer from "@/components/navbar/footer";
-import Header from "@/components/navbar/header";
+import Header from "@/components/navbar/header/header";
 import { Box, ChakraProvider, defaultSystem } from "@chakra-ui/react";
 import { FC, ReactNode } from "react";
 
@@ -12,7 +12,7 @@ const Providers: FC<LayoutPageProps> = ({ children }) => {
 	return (
 		<div>
 			<ChakraProvider value={defaultSystem}>
-				<Header />
+				<Header/>
 				{children}
 				<Footer />  
 			</ChakraProvider>

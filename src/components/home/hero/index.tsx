@@ -10,10 +10,10 @@ const Hero = () => {
 	const router = useRouter();
 	return (
 		<>
-			<Box h={{ base: "100%", md: 820 }} w="100%" bg="#0E6B56">
+			<Box id="home" h={{ base: "100%", md: 900 }} w="100%" bg="#0E6B56">
 				<Box className="container2">
 					<Flex
-						pt={6}
+						pt={28}
 						flexDir="column"
 						justifyContent="center"
 						alignItems="center"

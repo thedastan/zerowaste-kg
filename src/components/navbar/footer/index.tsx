@@ -11,7 +11,7 @@ const Footer = () => {
 	 
 	return (
 		<>
-			 <Map/>
+			 <Map />
 			 <Link href={WHATSAPP_LINK} target={"_blank"}>
 				<Text 
 					zIndex={1}

@@ -11,7 +11,7 @@ const Services = () => {
 	const { services_data } = useServicesData();
 
 	return (
-		<Box py={20}>
+		<Box id="services" py={20}>
 			<Box className="container">
 				 <Flex justifyContent="center" pb={{ base: 10, md: 24 }} w="100%">
 				 <Text w={720} textAlign="center" fontSize={{ base: 28, md: 52 }} fontWeight={600}>

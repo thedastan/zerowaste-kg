@@ -14,28 +14,27 @@ import {
 } from "@chakra-ui/react";
 import { IoChevronDown, IoClose, IoCloseOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
- 
+import { MdAccessTimeFilled } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+
 import Image from "next/image";
 
-import logo from "@/assets/img/logo.png";
+import logo from "@/assets/img/icon.png";
 
 import { PHONE_NUMBER } from "@/constants/admin";
 import { useServicesData } from "@/components/home/services/data";
 import { useRouter } from "next/navigation";
 
-const HeaderHero = () => {
+const HeaderDetail = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const toggleMenu = () => setIsOpen(!isOpen);
 	const { services_data } = useServicesData();
 	const [selectedService, setSelectedService] = useState("");
 	const router = useRouter();
+	const handleChange = (event: any) => {
+		setSelectedService(event.target.value);
+	};
 
- 
-  // Функция для закрытия меню при клике на элемент
-  const closeMenu = () => {
-    setIsOpen(false); // Закрыть меню
-  };
-	 
 	const nav = [
 		{
 			name: "Главная",
@@ -60,20 +59,20 @@ const HeaderHero = () => {
 	];
 
 	return (
-		<Box position="fixed" zIndex={1000} w="100%" bg="#0E6B56" py={4}>
+		<Box position="fixed" zIndex={1000} w="100%" bg="#ECF0F4" py={4}>
 			<div className="container">
 				<Flex justify="space-between" align="center">
 					<Flex w="148px">
-						 <Link href="/">
-						 <Image src={logo} alt="img" /></Link>
+          <Link href="/">
+          <Image src={logo} alt="img" /></Link>
 					</Flex>
 
 					<IconButton
 						display={{ base: "block", md: "none" }}
 						aria-label="Toggle Navigation"
 						variant="outline"
-						color="white"
-						borderColor="white"
+						color="black"
+						borderColor="black"
 						border="none"
 						onClick={toggleMenu}
 						as={isOpen ? IoClose : RxHamburgerMenu}
@@ -87,7 +86,7 @@ const HeaderHero = () => {
 						gap={{ base: 4, md: 8 }}
 						position={{ base: "absolute", md: "static" }}
 						p={4}
-						bg={{ md: "#0E6B56", base: "#EFEFEF" }}
+						bg="#ECF0F4"
 						w={{ base: "100%", md: "50%" }}
 						top="0"
 						left="0"
@@ -97,7 +96,7 @@ const HeaderHero = () => {
 							aria-label="Toggle Navigation"
 							variant="outline"
 							color="black"
-							borderColor="white"
+							borderColor="black"
 							border="none"
 							left={0}
 							onClick={toggleMenu}
@@ -106,9 +105,10 @@ const HeaderHero = () => {
 
 						<Box
 							display={{ base: "none", md: "flex" }}
-							color="white"
+							color="black"
 							gap="30px"
 							w="100%"
+              
 							border="none">
 							{nav.map((el, index) => {
 								if (el.name === "Услуги") {
@@ -151,7 +151,7 @@ const HeaderHero = () => {
 										key={index}
 										href={el.path}
 										border="none"
-										color="white"
+										color="black"
 										// w="100%"
 										textDecor="none">
 										{el.name}
@@ -189,7 +189,6 @@ const HeaderHero = () => {
 													setSelectedService(selectedId);
 													if (selectedId) {
 														router.push(`/${selectedId}`);
-														closeMenu(); 
 													}
 												}}>
 												{!selectedService && (
@@ -233,11 +232,11 @@ const HeaderHero = () => {
 						<Box>
 							<Link href={`tel:${PHONE_NUMBER}`} target={"_blank"}>
 								<Button
-									color="black"
+									color="whote"
 									borderRadius={32}
 									w={130}
 									h="48px"
-									bg="white"
+									bg="black"
 									fontSize={16}
 									fontWeight={500}>
 									Связаться
@@ -251,4 +250,4 @@ const HeaderHero = () => {
 	);
 };
 
-export default HeaderHero;
+export default HeaderDetail;
