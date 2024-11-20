@@ -10,14 +10,14 @@ import Services from "./services";
 const HomeSections = () => {
 	return (
 		<div>
-			{/* <Hero /> */}
+			<Hero />
 			<Services />
-			{/* <About /> */}
-			{/* <Works /> */}
-			{/* <Partners /> */}
-			{/* <Advantages /> */}
-			{/* <Material /> */}
-			{/* <Contact /> */}
+			<About />
+			<Works />
+			<Partners />
+			<Advantages />
+			<Material />
+			<Contact />
 		</div>
 	);
 };
