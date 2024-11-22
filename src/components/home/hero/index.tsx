@@ -2,17 +2,41 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import img from "@/assets/img/heroimg.png";
+import imagefon from "@/assets/img/gradient.png";
+
 import { useServicesData } from "../services/data";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const Hero = () => {
 	const { services_data } = useServicesData();
 	const router = useRouter();
+	const backgroundStyle = {
+		backgroundImage: `url(${imagefon.src})`,
+		backgroundSize: "cover",
+		backgroundPosition: "center 180px",
+	};
+
 	return (
 		<>
-			<Box id="home" h={{ base: "100%", md: 900 }} w="100%" bg="#0E6B56">
+			<Box
+				id="home"
+				h={{ base: "100%", md: 900 }}
+				// style={backgroundStyle}
+				w="100%"
+			 
+				bg="
+				linear-gradient(to bottom left, transparent 60%, #47FDA5 100%) bottom left,
+				linear-gradient(to bottom right, transparent 60%, #47FDA5 100%) bottom right,
+				#0E6B56"	
+
+				
+				
+				>
+				
 				<Box className="container2">
 					<Flex
+						zIndex={10}
 						pt={28}
 						flexDir="column"
 						justifyContent="center"
@@ -62,19 +86,18 @@ const Hero = () => {
 								<>
 									<Flex
 										key={index}
+										data-aos="zoom-in"
 										alignItems="center"
 										justifyContent="center"
+										onClick={() => router.push(`/${el.id}`)}
+										cursor="pointer"
 										gap={6}
 										w={{ base: "100%", md: 400 }}
 										h="127px">
-										<Box
-											border="solid 1px #FFFFFF5E"
-											w={150}
-											h="117px"
-											overflow="hidden">
+										<Box w={150} h="117px" overflow="hidden">
 											{el.image.map((item, index) => (
 												<Image
-												key={index}
+													key={index}
 													src={item.img}
 													alt="Service Image"
 													style={{
@@ -95,11 +118,7 @@ const Hero = () => {
 											<Text fontSize={22} fontWeight={400}>
 												{el.title}
 											</Text>
-											<Text
-												cursor="pointer"
-												onClick={() => router.push(`/${el.id}`)}
-												fontSize={14}
-												fontWeight={400}>
+											<Text cursor="pointer" fontSize={14} fontWeight={400}>
 												Подробнее
 											</Text>
 										</Flex>
@@ -125,6 +144,7 @@ const Hero = () => {
 			<Box>
 				<div className="container">
 					<Box
+						data-aos="fade-up"
 						display={{ base: "none", md: "flex" }}
 						borderRadius={14}
 						mt={-400}
@@ -139,10 +159,11 @@ const Hero = () => {
 					</Box>
 				</div>
 				<Box
+					data-aos="fade-up"
+					data-aos-duration="3000"
 					display={{ base: "flex", md: "none" }}
 					w="100%"
-					h="230px"
-					overflow="hidden">
+					h="180px">
 					<Image
 						style={{ width: "100%", height: "100%", objectFit: "cover" }}
 						src={img}

@@ -24,6 +24,10 @@ const Card: React.FC<CardProps> = ({ currentId }) => {
 				flexDirection={{ base: "column", md: "column" }}
 				alignItems="center"
 				className="container"
+				w={{ base: "100%", md: 400 }}
+				h="100%"
+				 
+
 				gap={10}>
 				<Box
 					display={{ base: "flex", md: "none" }}
@@ -33,7 +37,8 @@ const Card: React.FC<CardProps> = ({ currentId }) => {
 				
 				/>
 
-				{filteredServices.map((el, index) => (
+			 <Box  >
+			 {filteredServices.map((el, index) => (
 					<>
 						<Flex
 							key={index}
@@ -41,7 +46,7 @@ const Card: React.FC<CardProps> = ({ currentId }) => {
 							justifyContent="center"
 							onClick={() => router.push(`/${el.id}`)}
 							cursor="pointer"
-							gap={6}
+							gap={{ base: 4, md: 6 }}
 							w={{ base: "100%", md: 400 }}
 							h="127px">
 							<Box
@@ -65,7 +70,7 @@ const Card: React.FC<CardProps> = ({ currentId }) => {
 							</Box>
 							<Flex
 								h="110px"
-								w={180}
+								w={{ base: 150, md: 180 }}
 								flexDir="column"
 								justifyContent="center"
 								alignItems="start"
@@ -94,6 +99,7 @@ const Card: React.FC<CardProps> = ({ currentId }) => {
 						)}
 					</>
 				))}
+			 </Box>
 			</Flex>
 		</Box>
 	);

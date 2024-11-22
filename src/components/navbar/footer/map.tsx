@@ -58,10 +58,7 @@ const Map = () => {
 			icon: <IoLogoTiktok />,
 			link: TIKTOK_LINK,
 		},
-		{
-			icon: <FaYoutube />,
-			link: YOUTUBE_LINK,
-		},
+		 
 		{
 			icon: <FaFacebookF />,
 			link: FACEBOOK_LINK,
@@ -142,13 +139,15 @@ const Map = () => {
 								flexDirection="column"
 								p={{ base: "30px 0", md: "0px 0" }}>
 								<Link href={`tel:${PHONE_NUMBER}`} target={"_blank"}>
-									<Text fontSize={{ base: 30, md: 52 }} fontWeight={600}>
+									<Text data-aos="fade-left" data-aos-delay="200"
+									 fontSize={{ base: 30, md: 52 }} fontWeight={600}>
 										{PHONE_NUMBER}
 									</Text>
 								</Link>
 
 								<Link href={EMAIL_ADDRESS_LINK} target={"_blank"}>
-									<Text
+									<Text data-aos="fade-left" data-aos-delay="300"
+
 										color="#979797"
 										fontSize={{ base: 24, md: 32 }}
 										fontWeight={600}>
@@ -157,7 +156,7 @@ const Map = () => {
 								</Link>
 
 								<Link href={LOCATION_LINK} target={"_blank"}>
-									<Text
+									<Text data-aos="fade-left" data-aos-delay="400"
 										borderBottom={{ base: "none", md: "solid 1px #979797" }}
 										color="#979797"
 										fontSize={{ base: 16, md: 16 }}
@@ -176,6 +175,7 @@ const Map = () => {
 						/>
 
 						<Flex
+						data-aos="fade-left" data-aos-delay="500"
 							flexDirection={{ base: "column-reverse", md: "row" }}
 							alignItems={{ base: "start", md: "center" }}
 							justifyContent="space-between">

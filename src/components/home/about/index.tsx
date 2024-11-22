@@ -3,6 +3,7 @@ import React from "react";
 import { FiCheck } from "react-icons/fi";
 import ava from "@/assets/img/amangeldiev.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const About = () => {
 	const data = [
@@ -17,7 +18,7 @@ const About = () => {
 		},
 	];
 	return (
-		<Box id="about">
+		<Box  id="about">
 			<Box className="container2">
 				<Flex
 					flexDirection={{ base: "column", md: "row" }}
@@ -25,6 +26,7 @@ const About = () => {
 					justifyContent="space-between">
 					<Box
 						w="100%"
+						data-aos="fade-up-right"
 						p={{ base: "40px 15px", md: "40px 50px" }}
 						borderRadius="17px"
 						bg="#191919"
@@ -57,7 +59,8 @@ const About = () => {
 								</Flex>
 							))}
 						</Flex>
-						<Button
+						 <Link href={"#contact"}>
+						 <Button
 							mt={8}
 							w={330}
 							h="60px"
@@ -65,9 +68,10 @@ const About = () => {
 							bg="#0E6B56"
 							color="white">
 							Оставить заявку
-						</Button>
+						</Button></Link>
 					</Box>
 					<Box
+					data-aos="fade-up-left"
 						textAlign="center"
 						borderRadius="17px"
 						p={3}

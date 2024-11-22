@@ -13,33 +13,40 @@ const Services = () => {
 	return (
 		<Box id="services" py={20}>
 			<Box className="container">
-				 <Flex justifyContent="center" pb={{ base: 10, md: 24 }} w="100%">
-				 <Text w={720} textAlign="center" fontSize={{ base: 28, md: 52 }} fontWeight={600}>
-					Сделайте шаг к устойчивому будущему с нашими{" "}
-					<span style={{ color: "#0E6B56" }}>услугами</span>
-				</Text>
-				 </Flex>
-				<Flex justifyContent="center" flexWrap="wrap" gap={4}>
+				<Flex justifyContent="center" pb={{ base: 10, md: 24 }} w="100%">
+					<Text
+					data-aos="fade-up"
+						w={720}
+						textAlign="center"
+						fontSize={{ base: 28, md: 52 }}
+						fontWeight={600}>
+						Сделайте шаг к устойчивому будущему с нашими{" "}
+						<span style={{ color: "#0E6B56" }}>услугами</span>
+					</Text>
+				</Flex>
+				<Flex  justifyContent="center" flexWrap="wrap" gap={4}>
 					{services_data.slice(0, 2).map((el, index) => (
 						<Flex
+						data-aos="zoom-out-up"
+						data-aos-delay={index * 200}
 							as="div"
 							className="service-card"
 							justifyContent="space-between"
 							alignItems="center"
 							flexDirection="column"
 							bg="#F4F4F4"
-							w={{ base:"100%", md: "620px"}}
-							h={{ base:"435px", md: "620px"}}
+							w={{ base: "100%", md: "620px" }}
+							h={{ base: "455px", md: "620px" }}
 							borderRadius={12}
-							p={10}
+							p={{ base: "20px 19px", md: 10 }}
 							mt={4}
 							key={index}
 							onClick={() => router.push(`/${el.id}`)}>
 							<Text
 								as="div"
 								className="service-id"
-								color="#4E565C"	
-								p={{ base:"0px 15px", md: "5px 20px"}}
+								color="#4E565C"
+								p={{ base: "0px 15px", md: "5px 20px" }}
 								borderRadius={8}
 								border="2px solid #bbbbbb"
 								fontSize={18}
@@ -47,14 +54,18 @@ const Services = () => {
 								{String(el.id).padStart(2, "0")}
 							</Text>
 							<Text
-								lineHeight={{ base:"30px", md: "40px"}}
-								w={{ base:"100%", md:400}}
+								lineHeight={{ base: "30px", md: "40px" }}
+								w={{ base: "100%", md: 400 }}
 								textAlign="center"
-								fontSize={{ base:24, md: 34}}
+								fontSize={{ base: 24, md: 34 }}
 								fontWeight={600}>
 								{el.title}
 							</Text>
-							<Box   mt={2} position="relative" w={{ base:200, md: 332}} h={{ base: 200, md: 332}}>
+							<Box
+								mt={2}
+								position="relative"
+								w={{ base: 250, md: 332 }}
+								h={{ base: 250, md: 332 }}>
 								<Box
 									className="image-wrapper"
 									w="100%"
@@ -66,7 +77,6 @@ const Services = () => {
 									<Image
 										src={el.image[0].img}
 										alt="Service Image"
-									
 										style={{
 											width: "100%",
 											height: "100%",
@@ -75,7 +85,7 @@ const Services = () => {
 									/>
 								</Box>
 							</Box>
-							<Flex mt={{ base:3, md: 0}} gap={2} alignItems="center">
+							<Flex mt={{ base: 3, md: 0 }} gap={2} alignItems="center">
 								<Text fontSize={18} fontWeight={400}>
 									Узнать подробнее
 								</Text>
@@ -87,27 +97,34 @@ const Services = () => {
 					))}
 				</Flex>
 
-				<Box display={{ base: "flex", md: "none" }} justifyContent="center" flexWrap="wrap" gap={4}>
+				<Box
+					display={{ base: "flex", md: "none" }}
+					justifyContent="center"
+					flexWrap="wrap"
+					data-aos="zoom-out-up"
+					gap={4}>
 					{services_data.slice(2, 3).map((el, index) => (
 						<Flex
+						data-aos="zoom-out-up"
+						data-aos-delay={index * 200}
 							as="div"
 							className="service-card"
 							justifyContent="space-between"
 							alignItems="center"
 							flexDirection="column"
 							bg="#F4F4F4"
-							w={{ base:"100%", md: "620px"}}
-							h={{ base:"435px", md: "620px"}}
+							w={{ base: "100%", md: "620px" }}
+							h={{ base: "455px", md: "620px" }}
 							borderRadius={12}
-							p={10}
+							p={{ base: "20px 19px", md: 10 }}
 							mt={4}
 							key={index}
 							onClick={() => router.push(`/${el.id}`)}>
 							<Text
 								as="div"
 								className="service-id"
-								color="#4E565C"	
-								p={{ base:"0px 15px", md: "5px 20px"}}
+								color="#4E565C"
+								p={{ base: "0px 15px", md: "5px 20px" }}
 								borderRadius={8}
 								border="2px solid #bbbbbb"
 								fontSize={18}
@@ -115,14 +132,18 @@ const Services = () => {
 								{String(el.id).padStart(2, "0")}
 							</Text>
 							<Text
-								lineHeight={{ base:"30px", md: "40px"}}
-								w={{ base:"100%", md:400}}
+								lineHeight={{ base: "30px", md: "40px" }}
+								w={{ base: "100%", md: 400 }}
 								textAlign="center"
-								fontSize={{ base:24, md: 34}}
+								fontSize={{ base: 24, md: 34 }}
 								fontWeight={600}>
 								{el.title}
 							</Text>
-							<Box   mt={2} position="relative" w={{ base:200, md: 332}} h={{ base: 200, md: 332}}>
+							<Box
+								mt={2}
+								position="relative"
+								w={{ base: 250, md: 332 }}
+								h={{ base: 250, md: 332 }}>
 								<Box
 									className="image-wrapper"
 									w="100%"
@@ -134,7 +155,6 @@ const Services = () => {
 									<Image
 										src={el.image[0].img}
 										alt="Service Image"
-									
 										style={{
 											width: "100%",
 											height: "100%",
@@ -143,7 +163,7 @@ const Services = () => {
 									/>
 								</Box>
 							</Box>
-							<Flex mt={{ base:3, md: 0}} gap={2} alignItems="center">
+							<Flex mt={{ base: 3, md: 0 }} gap={2} alignItems="center">
 								<Text fontSize={18} fontWeight={400}>
 									Узнать подробнее
 								</Text>
@@ -155,9 +175,16 @@ const Services = () => {
 					))}
 				</Box>
 
-				<Box display={{ base: "none", md: "flex" }} justifyContent="center" flexWrap="wrap" gap={4}>
+				<Box
+					display={{ base: "none", md: "flex" }}
+					justifyContent="center"
+					data-aos="zoom-out-up"
+					flexWrap="wrap"
+					gap={4}>
 					{services_data.slice(2, 3).map((el, index) => (
 						<Flex
+						data-aos="zoom-out-up"
+						data-aos-delay={index * 200}
 							as="div"
 							className="service-card"
 							justifyContent={{ base: "space-between", md: "space-around" }}
@@ -165,9 +192,9 @@ const Services = () => {
 							flexDirection={{ base: "column", md: "row" }}
 							bg="#F4F4F4"
 							w="100%"
-							h={{ base:"435px", md: "440px"}}
+							h={{ base: "455px", md: "440px" }}
 							borderRadius={12}
-							p={10}
+							p={{ base: "20px 19px", md: 10 }}
 							mt={4}
 							key={index}
 							onClick={() => router.push(`/${el.id}`)}>
@@ -181,7 +208,7 @@ const Services = () => {
 									as="div"
 									className="service-id"
 									color="#4E565C"
-									p={{ base:"0px 15px", md: "5px 20px"}}
+									p={{ base: "0px 15px", md: "5px 20px" }}
 									borderRadius={8}
 									border="2px solid #bbbbbb"
 									fontSize={18}
@@ -192,32 +219,36 @@ const Services = () => {
 									lineHeight="40px"
 									w={400}
 									textAlign="center"
-									fontSize={{ base:24, md: 34}}
+									fontSize={{ base: 24, md: 34 }}
 									fontWeight={600}>
 									{el.title}
 								</Text>
 
-								<Box display={{ base:"block", md: "none"}}  mt={2} position="relative" w={{ base:200, md: 332}} h={{ base: 200, md: 332}}>
 								<Box
-									className="image-wrapper"
-									w="100%"
-									h="100%"
-									borderRadius="50%"
-									overflow="hidden"
-									position="relative">
-									<span className="hover-text">{el.cart_desc}</span>
-									<Image
-										src={el.image[0].img}
-										alt="Service Image"
-									
-										style={{
-											width: "100%",
-											height: "100%",
-											objectFit: "cover",
-										}}
-									/>
+									display={{ base: "block", md: "none" }}
+									mt={2}
+									position="relative"
+									w={{ base: 200, md: 332 }}
+									h={{ base: 200, md: 332 }}>
+									<Box
+										className="image-wrapper"
+										w="100%"
+										h="100%"
+										borderRadius="50%"
+										overflow="hidden"
+										position="relative">
+										<span className="hover-text">{el.cart_desc}</span>
+										<Image
+											src={el.image[0].img}
+											alt="Service Image"
+											style={{
+												width: "100%",
+												height: "100%",
+												objectFit: "cover",
+											}}
+										/>
+									</Box>
 								</Box>
-							</Box>
 
 								<Flex gap={2} alignItems="center">
 									<Text fontSize={18} fontWeight={400}>
@@ -229,7 +260,12 @@ const Services = () => {
 								</Flex>
 							</Flex>
 
-							<Box display={{ base:"none", md: "flex"}} mt={2} position="relative" w={332} h={332}>
+							<Box
+								display={{ base: "none", md: "flex" }}
+								mt={2}
+								position="relative"
+								w={332}
+								h={332}>
 								<Box
 									className="image-wrapper"
 									w="100%"
@@ -255,27 +291,29 @@ const Services = () => {
 					))}
 				</Box>
 
-				<Flex justifyContent="center" flexWrap="wrap" gap={4}>
-					{services_data.slice(3,5).map((el, index) => (
+				<Flex data-aos="zoom-out-up" justifyContent="center" flexWrap="wrap" gap={4}>
+					{services_data.slice(3, 5).map((el, index) => (
 						<Flex
+						data-aos="zoom-out-up"
+						data-aos-delay={index * 200}
 							as="div"
 							className="service-card"
 							justifyContent="space-between"
 							alignItems="center"
 							flexDirection="column"
 							bg="#F4F4F4"
-							w={{ base:"100%", md: "620px"}}
-							h={{ base:"435px", md: "620px"}}
+							w={{ base: "100%", md: "620px" }}
+							h={{ base: "455px", md: "620px" }}
 							borderRadius={12}
-							p={10}
+							p={{ base: "20px 19px", md: 10 }}
 							mt={4}
 							key={index}
 							onClick={() => router.push(`/${el.id}`)}>
 							<Text
 								as="div"
 								className="service-id"
-								color="#4E565C"	
-								p={{ base:"0px 15px", md: "5px 20px"}}
+								color="#4E565C"
+								p={{ base: "0px 15px", md: "5px 20px" }}
 								borderRadius={8}
 								border="2px solid #bbbbbb"
 								fontSize={18}
@@ -283,14 +321,18 @@ const Services = () => {
 								{String(el.id).padStart(2, "0")}
 							</Text>
 							<Text
-								lineHeight={{ base:"30px", md: "40px"}}
-								w={{ base:"100%", md:400}}
+								lineHeight={{ base: "30px", md: "40px" }}
+								w={{ base: "100%", md: 400 }}
 								textAlign="center"
-								fontSize={{ base:24, md: 34}}
+								fontSize={{ base: 24, md: 34 }}
 								fontWeight={600}>
 								{el.title}
 							</Text>
-							<Box mt={2} position="relative" w={{ base:200, md: 332}} h={{ base: 200, md: 332}}>
+							<Box
+								mt={2}
+								position="relative"
+								w={{ base: 250, md: 332 }}
+								h={{ base: 250, md: 332 }}>
 								<Box
 									className="image-wrapper"
 									w="100%"
@@ -302,7 +344,6 @@ const Services = () => {
 									<Image
 										src={el.image[0].img}
 										alt="Service Image"
-									
 										style={{
 											width: "100%",
 											height: "100%",
@@ -311,7 +352,7 @@ const Services = () => {
 									/>
 								</Box>
 							</Box>
-							<Flex mt={{ base:3, md: 0}} gap={2} alignItems="center">
+							<Flex mt={{ base: 3, md: 0 }} gap={2} alignItems="center">
 								<Text fontSize={18} fontWeight={400}>
 									Узнать подробнее
 								</Text>

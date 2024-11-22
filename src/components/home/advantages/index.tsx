@@ -4,7 +4,11 @@ import icon1 from "@/assets/img/icon1.png";
 import icon2 from "@/assets/img/icon2.png";
 import icon3 from "@/assets/img/icon3.png";
 
-import sliderimg from "@/assets/img/advantages-img.png";
+import sliderimg from "@/assets/img/img2.3.png";
+import sliderimg1 from "@/assets/img/img3.3.png";
+import sliderimg2 from "@/assets/img/img4.4.png";
+import sliderimg3 from "@/assets/img/img5.3.png";
+
 import Image from "next/image";
 
 import Slider from "react-slick";
@@ -15,7 +19,6 @@ import { useRef } from "react";
 const Advantages = () => {
 	const sliderRef = useRef<Slider | null>(null);
 
-	
 	const settings = {
 		dots: true,
 		infinite: true,
@@ -23,23 +26,32 @@ const Advantages = () => {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: false,
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 2,
-				},
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-				},
-			},
-		],
+		appendDots: (dots: any) => (
+			<Box>
+				<ul
+					style={{
+						margin: 0,
+						padding: 0,
+						listStyle: "none",
+						display: "flex",
+						justifyContent: "center",
+						gap: "10px",
+					}}>
+					{dots}
+				</ul>
+			</Box>
+		),
+		customPaging: () => (
+			<Box
+				w="10px"
+				h="10px"
+				borderRadius="full"
+				bg="gray" // Цвет неактивной точки
+				transition="background-color 0.3s ease"
+				mt={{ base: 2, md: 4 }}
+			/>
+		),
 	};
-	
-	
 
 	const data = [
 		{
@@ -58,13 +70,16 @@ const Advantages = () => {
 			desc: "Используем только проверенные чешские, немецкие и японские материалы с гарантией до 15 лет.",
 		},
 	];
+
 	return (
-		<Flex id="advantages"
+		<Flex
+			id="advantages"
 			justifyContent="center"
 			alignItems="center"
 			py={20}
 			color="white"
-			bg="#191919">
+			// bg="#191919"
+			bg="radial-gradient(circle at bottom left, #004737 30%, #191919 70%)">
 			<div className="container">
 				<Flex
 					textAlign="center"
@@ -89,9 +104,16 @@ const Advantages = () => {
 							Мы объединяем опыт квалифицированных специалистов, собственное
 							производство с современным швейцарским оборудованием.
 						</Text>
-						<Flex flexDirection={{ base: "column", md: "row" }} textAlign="start" gap={4} py={6}>
+						<Flex
+							flexDirection={{ base: "column", md: "row" }}
+							textAlign="start"
+							gap={4}
+							py={6}>
 							{data.map((el, index) => (
 								<Flex
+								data-aos="fade-up"
+									data-aos-delay={index * 200} // Задержка появления каждой карточки
+									data-aos-duration="800"
 									bg="#77777727"
 									borderRadius={10}
 									flexDirection="column"
@@ -112,14 +134,70 @@ const Advantages = () => {
 								</Flex>
 							))}
 						</Flex>
-						<Box borderRadius={10} w="100%" maxW={{ base: "100%", md: "950px" }} mx="auto">
+						<Box
+						data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom"
+							borderRadius={10}
+							w="100%"
+							maxW={{ base: "100%", md: "950px" }}
+							mx="auto">
 							<Slider ref={sliderRef} {...settings}>
-								<Image src={sliderimg} alt="img" />
-								<Image src={sliderimg} alt="img" />
-								<Image src={sliderimg} alt="img" />
-								<Image src={sliderimg} alt="img" />
-								<Image src={sliderimg} alt="img" />
-								<Image src={sliderimg} alt="img" />
+								<Box
+									w="100%"
+									h={{ base: "230px", md: "425px" }}
+									overflow="hidden">
+									<Image
+										style={{
+											width: "100%",
+											height: "100%",
+											objectFit: "cover",
+										}}
+										src={sliderimg}
+										alt="img"
+									/>
+								</Box>
+								<Box
+									w="100%"
+									h={{ base: "230px", md: "425px" }}
+									overflow="hidden">
+									<Image
+										style={{
+											width: "100%",
+											height: "100%",
+											objectFit: "cover",
+										}}
+										src={sliderimg1}
+										alt="img"
+									/>
+								</Box>
+								<Box
+									w="100%"
+									h={{ base: "230px", md: "425px" }}
+									overflow="hidden">
+									<Image
+										style={{
+											width: "100%",
+											height: "100%",
+											objectFit: "cover",
+										}}
+										src={sliderimg2}
+										alt="img"
+									/>
+								</Box>
+								<Box
+									w="100%"
+									h={{ base: "230px", md: "425px" }}
+									overflow="hidden">
+									<Image
+										style={{
+											width: "100%",
+											height: "100%",
+											objectFit: "cover",
+										}}
+										src={sliderimg3}
+										alt="img"
+									/>
+								</Box>
 							</Slider>
 						</Box>
 					</Flex>

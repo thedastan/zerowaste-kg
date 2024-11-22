@@ -7,10 +7,12 @@
 	border-radius: 32px !important;
 	border: 1px solid #1a1d201f !important;
 	background: rgb(221, 224, 224) ;
+
+	
  
  
 	input {
-		width: 280px;
+		width: 270px;
 		font-size: 16px !important;
 		line-height: 22px !important;
 		font-weight: 400 !important;
@@ -44,6 +46,7 @@
 }
 
 .pincode-input-container {
+	width: 100%;
 	display: flex !important;
 	flex-wrap: nowrap !important;
 	.pincode-input-text {
@@ -75,7 +78,7 @@
   -ms-overflow-style: none;  
   scrollbar-width: none;  
 	
-	background: #bbbbbb;
+	// background: #bbbbbb;
 
 }
 
@@ -169,7 +172,7 @@
 				font-size: 14px;
 				font-weight: 400;
 				z-index: 1;
-				width: 180px;
+				width: 230px;
 				text-align: center;
 				transition: 0.3s;
 			} 
@@ -180,10 +183,63 @@
 			color: white;
 			z-index: 10;
 
-			// background: #646464;
+			// background: #d6d6d6;
 
     }
 	}
+}
+
+
+// .slick-dots li.slick-active button {
+// 	background-color: white !important;
+// }
+ 
+///
+ 
+.burger-icon-button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-icon {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  .bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  &.open {
+    .bar-top {
+      transform: rotate(45deg) translateY(12px);
+    }
+
+    .bar-middle {
+      opacity: 0;
+    }
+
+    .bar-bottom {
+      transform: rotate(-45deg) translateY(-12px);
+    }
+  }
 }
 
 

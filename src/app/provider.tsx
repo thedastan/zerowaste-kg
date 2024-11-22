@@ -1,6 +1,6 @@
 "use client";
 import Footer from "@/components/navbar/footer";
-import Header from "@/components/navbar/header/header";
+import Header from "@/components/navbar/header";
 import { Box, ChakraProvider, defaultSystem } from "@chakra-ui/react";
 import { FC, ReactNode } from "react";
 
