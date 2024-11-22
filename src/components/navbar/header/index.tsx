@@ -213,8 +213,7 @@ const Header = () => {
 											<select
 												style={{
 													background: "none",
-													// border: "solid 1px grey",
-													// padding: "10px",
+													 
 													width: "100%",
 													display:"flex",
 													justifyContent:"center",
@@ -226,19 +225,10 @@ const Header = () => {
 													backgroundImage: "none",
 												}}
 												value={selectedService}
-												onChange={(event) => {
-													const selectedId = event.target.value;
-													setSelectedService(selectedId);
-													if (selectedId) {
-														router.push(`/${selectedId}`);
-														closeMenu();
-													}
-												}}>
-												{!selectedService && (
-													<option style={{ display: "flex" }} value="" disabled>
-														Услуги  
-													</option>
-												)}
+												 >
+												 
+												 
+												 
 												{services_data.map((service) => (
 													<option
 														style={{ color: "black" }}
@@ -250,55 +240,12 @@ const Header = () => {
 												))}
 											</select>
 
-											{/* <select
-												style={{
-													background: "none",
-													border: "none",
-													width: "70px",
-													textAlign:"center"
-												}}
-												value={selectedService || ""}
-												onChange={(event) => {
-													const selectedId = event.target.value;
-													setSelectedService(selectedId);
-													if (selectedId) {
-														router.push(`/${selectedId}`);
-													}
-												}}>
-												{!selectedService && (
-													<option style={{ display: "flex" }} value="" disabled>
-														Услуги 
-													</option>
-												)}
-												{services_data.map((service) => (
-													<option
-														style={{ color: "black" }}
-														key={service.id}
-														value={service.id}>
-														{service.title}
-													</option>
-												))}
-											</select> */}
+										 
 										</Flex>
 									);
 								}
 
-								return (
-									<Link
-										key={index}
-										href={el.path}
-										display="flex"
-										justifyContent="center"
-										color="black"
-										w="100%"
-										// border="solid 1px grey"
-										onClick={closeMenu}
-										p={1}
-										textAlign="center"
-										textDecor="none">
-										{el.name}
-									</Link>
-								);
+							 
 							})}
 
 							<Flex alignItems="center" justifyContent="center" gap={2}>
@@ -335,6 +282,8 @@ const Header = () => {
 								</Link>
 							</Flex>
 						</Flex>
+
+
 					</Flex>
 
 					<Box display={{ md: "flex", base: "none" }}>

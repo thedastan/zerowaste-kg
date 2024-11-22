@@ -7,6 +7,7 @@ import imagefon from "@/assets/img/gradient.png";
 import { useServicesData } from "../services/data";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { GoArrowRight } from "react-icons/go";
 
 const Hero = () => {
 	const { services_data } = useServicesData();
@@ -24,16 +25,10 @@ const Hero = () => {
 				h={{ base: "100%", md: 900 }}
 				// style={backgroundStyle}
 				w="100%"
-			 
 				bg="
 				linear-gradient(to bottom left, transparent 60%, #47FDA5 100%) bottom left,
 				linear-gradient(to bottom right, transparent 60%, #47FDA5 100%) bottom right,
-				#0E6B56"	
-
-				
-				
-				>
-				
+				#0E6B56">
 				<Box className="container2">
 					<Flex
 						zIndex={10}
@@ -118,9 +113,14 @@ const Hero = () => {
 											<Text fontSize={22} fontWeight={400}>
 												{el.title}
 											</Text>
-											<Text cursor="pointer" fontSize={14} fontWeight={400}>
-												Подробнее
-											</Text>
+											<Flex gap={2} justifyContent="center" alignItems="center">
+												<Text cursor="pointer" fontSize={14} fontWeight={400}>
+													Подробнее
+												</Text>
+												<Text>
+													<GoArrowRight />
+												</Text>
+											</Flex>
 										</Flex>
 									</Flex>
 									{index < services_data.slice(0, 3).length - 1 && (
