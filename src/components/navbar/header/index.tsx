@@ -215,7 +215,7 @@ const Header = () => {
 													background: "none",
 													// border: "solid 1px grey",
 													// padding: "10px",
-													width: "100%",
+													// width: "100%",
 													display:"flex",
 													justifyContent:"center",
 													alignItems:"center",
