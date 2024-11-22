@@ -210,12 +210,15 @@ const Header = () => {
 											textAlign="center"
 											key={index}
 											w="100%">
-											{/* <select
+											<select
 												style={{
 													background: "none",
 													// border: "solid 1px grey",
-													padding: "10px",
+													// padding: "10px",
 													width: "100%",
+													display:"flex",
+													justifyContent:"center",
+													alignItems:"center",
 													textAlign: "center",
 													WebkitAnimation: "none",
 													appearance: "none",
@@ -233,7 +236,7 @@ const Header = () => {
 												}}>
 												{!selectedService && (
 													<option style={{ display: "flex" }} value="" disabled>
-														Услуги <IoChevronDown />
+														Услуги  
 													</option>
 												)}
 												{services_data.map((service) => (
@@ -245,13 +248,13 @@ const Header = () => {
 														{service.title}
 													</option>
 												))}
-											</select> */}
+											</select>
 
-											<select
+											{/* <select
 												style={{
 													background: "none",
 													border: "none",
-													width: "100px",
+													width: "70px",
 													textAlign:"center"
 												}}
 												value={selectedService || ""}
@@ -275,7 +278,7 @@ const Header = () => {
 														{service.title}
 													</option>
 												))}
-											</select>
+											</select> */}
 										</Flex>
 									);
 								}
