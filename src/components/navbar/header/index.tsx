@@ -142,6 +142,7 @@ const Header = () => {
 							// color="white"
 							gap="30px"
 							w="100%"
+							textAlign="center"
 							border="none">
 							{nav.map((el, index) => {
 								if (el.name === "Услуги") {
@@ -203,7 +204,7 @@ const Header = () => {
 							{nav.map((el, index) => {
 								if (el.name === "Услуги") {
 									return (
-										<Box key={index}>
+										<Flex justifyContent="center" align="center" textAlign="center" key={index}>
 											<select
 												style={{
 													background: "none",
@@ -240,7 +241,7 @@ const Header = () => {
 													</option>
 												))}
 											</select>
-										</Box>
+										</Flex>
 									);
 								}
 

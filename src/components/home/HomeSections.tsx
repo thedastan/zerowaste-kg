@@ -23,14 +23,14 @@ const HomeSections = () => {
 
 	return (
 		<div>
-			<Hero />
-			<Services />
-			<About />
-			<Works />
-			<Partners />
-			<Advantages />
-			<Material />
-			<Contact />
+			{/* <Hero /> */}
+			{/* <Services /> */}
+			{/* <About /> */}
+			{/* <Works /> */}
+			{/* <Partners /> */}
+			{/* <Advantages /> */}
+			{/* <Material /> */}
+			{/* <Contact /> */}
 		</div>
 	);
 };
