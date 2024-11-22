@@ -219,7 +219,7 @@ const Header = () => {
 													display:"flex",
 													justifyContent:"center",
 													alignItems:"center",
-													// textAlign: "center",
+													textAlign: "center",
 													WebkitAnimation: "none",
 													appearance: "none",
 													MozAnimation: "none",
