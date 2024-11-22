@@ -194,7 +194,7 @@ const Header = () => {
 							})}
 						</Box>
 
-						<Box
+						<Flex justifyContent="center" align="center" textAlign="center"
 							mt={4}
 							py={4}
 							w="100%"
@@ -204,7 +204,7 @@ const Header = () => {
 							{nav.map((el, index) => {
 								if (el.name === "Услуги") {
 									return (
-										<Flex justifyContent="center" align="center" textAlign="center" key={index}>
+										<Flex justifyContent="center" align="center" textAlign="center" key={index} w={140}>
 											<select
 												style={{
 													background: "none",
@@ -296,7 +296,7 @@ const Header = () => {
 								</Button>
 							</Link>
 						</Flex>
-						</Box>
+						</Flex>
 					</Flex>
 
 					<Box display={{ md: "flex", base: "none" }}>
