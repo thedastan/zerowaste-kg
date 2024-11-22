@@ -12,8 +12,6 @@ import {
 	SelectItem,
 	Text,
 } from "@chakra-ui/react";
-import { IoChevronDown, IoClose, IoCloseOutline } from "react-icons/io5";
-import { RxHamburgerMenu } from "react-icons/rx";
 
 import Image from "next/image";
 
@@ -34,7 +32,7 @@ import {
 	PHONE_NUMBER,
 	TELEGRAM_LINK,
 	TIKTOK_LINK,
-} from "@/constants/admin";	
+} from "@/constants/admin";
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -131,7 +129,6 @@ const Header = () => {
 						position={{ base: "absolute", md: "static" }}
 						p={4}
 						bg={{ base: "#d6d6d6", md: "none" }}
-					 
 						w={{ base: "100%", md: "50%" }}
 						transition="1s"
 						top="70px"
@@ -194,7 +191,10 @@ const Header = () => {
 							})}
 						</Box>
 
-						<Flex justifyContent="center" align="center" textAlign="center"
+						<Flex
+							justifyContent="center"
+							align="center"
+							textAlign="center"
 							mt={4}
 							py={4}
 							w="100%"
@@ -204,8 +204,13 @@ const Header = () => {
 							{nav.map((el, index) => {
 								if (el.name === "Услуги") {
 									return (
-										<Flex justifyContent="center" align="center" textAlign="center" key={index} w={140}>
-											<select
+										<Flex
+											justifyContent="center"
+											align="center"
+											textAlign="center"
+											key={index}
+											w="100%">
+											{/* <select
 												style={{
 													background: "none",
 													// border: "solid 1px grey",
@@ -227,7 +232,7 @@ const Header = () => {
 													}
 												}}>
 												{!selectedService && (
-													<option value="" disabled>
+													<option style={{ display: "flex" }} value="" disabled>
 														Услуги <IoChevronDown />
 													</option>
 												)}
@@ -237,6 +242,36 @@ const Header = () => {
 														key={service.id}
 														value={service.id}
 														onClick={closeMenu}>
+														{service.title}
+													</option>
+												))}
+											</select> */}
+
+											<select
+												style={{
+													background: "none",
+													border: "none",
+													width: "100px",
+													textAlign:"center"
+												}}
+												value={selectedService || ""}
+												onChange={(event) => {
+													const selectedId = event.target.value;
+													setSelectedService(selectedId);
+													if (selectedId) {
+														router.push(`/${selectedId}`);
+													}
+												}}>
+												{!selectedService && (
+													<option style={{ display: "flex" }} value="" disabled>
+														Услуги 
+													</option>
+												)}
+												{services_data.map((service) => (
+													<option
+														style={{ color: "black" }}
+														key={service.id}
+														value={service.id}>
 														{service.title}
 													</option>
 												))}
@@ -283,19 +318,19 @@ const Header = () => {
 							</Flex>
 
 							<Flex alignItems="center" justifyContent="center">
-							<Link href={`tel:${PHONE_NUMBER}`} target={"_blank"}>
-								<Button
-									color="black"
-									borderRadius={32}
-									w="200px"
-									h="48px"
-									bg="white"
-									fontSize={16}
-									fontWeight={500}>
-									Связаться
-								</Button>
-							</Link>
-						</Flex>
+								<Link href={`tel:${PHONE_NUMBER}`} target={"_blank"}>
+									<Button
+										color="black"
+										borderRadius={32}
+										w="200px"
+										h="48px"
+										bg="white"
+										fontSize={16}
+										fontWeight={500}>
+										Связаться
+									</Button>
+								</Link>
+							</Flex>
 						</Flex>
 					</Flex>
 
