@@ -16,25 +16,19 @@ const data = [
 	{ image: partners4 },
 	{ image: partners5 },
 	{ image: partners6 },
-	{ image: partners1 },
-	{ image: partners2 },
-	{ image: partners3 },
-	{ image: partners4 },
-	{ image: partners5 },
-	{ image: partners6 },
+	 
 ];
-
-// Keyframes for the animation
-const moveLeft = `
-  @keyframes moveLeft {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-`;
+ 
+// const moveLeft = `
+//   @keyframes moveLeft {
+//     0% {
+//       transform: translateX(100%);
+//     }
+//     100% {
+//       transform: translateX(-100%);
+//     }
+//   }
+// `;
 
 const Partners = () => {
 	return (
@@ -44,7 +38,7 @@ const Partners = () => {
 					Партнеры
 				</Text>
 			 
-				<style jsx global>{moveLeft}</style>
+				{/* <style jsx global>{moveLeft}</style> */}
 				<Flex
 					gap={2}
 					style={{

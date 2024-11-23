@@ -95,7 +95,7 @@ const Map = () => {
 							height="100%"
 							loading="lazy"></iframe>
 					</Box>
-					<Flex
+					<Flex	
 						w={{ base: "100%", md: 790 }}
 						p={{ base: "50px 0", md: "10px 0" }}
 						flexDirection="column"

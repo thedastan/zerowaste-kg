@@ -6,6 +6,10 @@ import {
 	Flex,
 	IconButton,
 	Link,
+	MenuContent,
+	MenuItem,
+	MenuRoot,
+	MenuTrigger,
 	Popover,
 	PopoverTrigger,
 	Select,
@@ -209,52 +213,33 @@ const Header = () => {
 								gap={2}>
 								{nav.slice(0, 2).map((el, index) => (
 									<Link onClick={() => closeMenu()} key={index} href={el.path}>
-										<Text>{el.name}</Text>
+										<Text  fontSize={14} fontWeight={400}>{el.name}</Text>
 									</Link>
 								))}
-								<div
-									style={{
-										display: "flex",
-										alignItems: "center",
-										justifyContent: "center",
-										
-										width: "100%",
-										height: "100%",
-									}}>
-									<select
-										style={{
-											appearance: "none",
-											background: "none",
-											WebkitAppearance:"none",
-											width: "100%",
-											height: "100%",
-											textAlign: "center",
-										}}
-										value={selectedService}
-										onChange={(event) => {
-											const selectedId = event.target.value;
-											setSelectedService(selectedId);
-											if (selectedId) {
-												router.push(`/${selectedId}`);
-												closeMenu();
-											}
-										}}>
-										{!selectedService && (
-											<option value="" disabled>
-												Услуги
-											</option>
-										)}
-										{services_data.map((service) => (
-											<option key={service.id} value={service.id}>
-												{service.title}
-											</option>
+							 
+
+								<MenuRoot>
+									<MenuTrigger asChild>
+										<Button bg="none" variant="outline"  fontSize={14} fontWeight={400} h="100%" border="none">
+										Услуги
+										</Button>
+									</MenuTrigger>
+									<MenuContent onClick={() => closeMenu()} display="flex" flexDirection="column" gap="10px" position="absolute" mt="180px" p={2}>
+										{services_data.map((el, index) => (
+											<MenuItem
+												key={index}
+												 
+												onClick={() => router.push(`/${el.id}`)}
+												value="new-txt">
+												{el.title}
+											</MenuItem>
 										))}
-									</select>
-								</div>
+									</MenuContent>
+								</MenuRoot>
 
 								{nav.slice(3, 6).map((el, index) => (
 									<Link onClick={() => closeMenu()} key={index} href={el.path}>
-										<Text>{el.name}</Text>
+										<Text  fontSize={14} fontWeight={400}>{el.name}</Text>
 									</Link>
 								))}
 							</Flex>
