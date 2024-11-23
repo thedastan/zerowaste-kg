@@ -200,8 +200,7 @@ const Header = () => {
 							w="100%"
 							display={{ base: "flex", md: "none" }}
 							flexDirection="column"
-							gap={5}
-							>
+							gap={5}>
 							<Flex
 								flexDirection="column"
 								justifyContent="center"
@@ -213,39 +212,45 @@ const Header = () => {
 										<Text>{el.name}</Text>
 									</Link>
 								))}
-								<select
+								<div
 									style={{
 										display: "flex",
 										alignItems: "center",
 										justifyContent: "center",
-										textAlign: "center",
-										appearance: "none",
-										background:"none",
-									}}
-									value={selectedService}
-									onChange={(event) => {
-										const selectedId = event.target.value;
-										setSelectedService(selectedId);
-										if (selectedId) {
-											router.push(`/${selectedId}`);
-											closeMenu();
-										}
+										
+										width: "100%",
+										height: "100%",
 									}}>
-									{!selectedService && (
-										<option style={{ display: "flex" }} value="" disabled>
-											Услуги
-										</option>
-									)}
-									{services_data.map((service) => (
-										<option
-											style={{ color: "black" }}
-											key={service.id}
-											value={service.id}
-											onClick={closeMenu}>
-											{service.title}
-										</option>
-									))}
-								</select>
+									<select
+										style={{
+											appearance: "none",
+											background: "none",
+											WebkitAppearance:"none",
+											width: "100%",
+											height: "100%",
+											textAlign: "center",
+										}}
+										value={selectedService}
+										onChange={(event) => {
+											const selectedId = event.target.value;
+											setSelectedService(selectedId);
+											if (selectedId) {
+												router.push(`/${selectedId}`);
+												closeMenu();
+											}
+										}}>
+										{!selectedService && (
+											<option value="" disabled>
+												Услуги
+											</option>
+										)}
+										{services_data.map((service) => (
+											<option key={service.id} value={service.id}>
+												{service.title}
+											</option>
+										))}
+									</select>
+								</div>
 
 								{nav.slice(3, 6).map((el, index) => (
 									<Link onClick={() => closeMenu()} key={index} href={el.path}>
