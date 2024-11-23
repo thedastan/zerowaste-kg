@@ -200,53 +200,59 @@ const Header = () => {
 							w="100%"
 							display={{ base: "flex", md: "none" }}
 							flexDirection="column"
-							gap={5}>
-							{nav.map((el, index) => {
-								if (el.name === "Услуги") {
-									return (
-										<Flex
-											justifyContent="center"
-											align="center"
-											textAlign="center"
-											key={index}
-											w="100%">
-											<select
-												style={{
-													background: "none",
-													 
-													width: "100%",
-													display:"flex",
-													justifyContent:"center",
-													alignItems:"center",
-													textAlign: "center",
-													WebkitAnimation: "none",
-													appearance: "none",
-													MozAnimation: "none",
-													backgroundImage: "none",
-												}}
-												value={selectedService}
-												 >
-												 
-												 
-												 
-												{services_data.map((service) => (
-													<option
-														style={{ color: "black" }}
-														key={service.id}
-														value={service.id}
-														onClick={closeMenu}>
-														{service.title}
-													</option>
-												))}
-											</select>
+							gap={5}
+							>
+							<Flex
+								flexDirection="column"
+								justifyContent="center"
+								alignItems="center"
+								textAlign="center"
+								gap={2}>
+								{nav.slice(0, 2).map((el, index) => (
+									<Link onClick={() => closeMenu()} key={index} href={el.path}>
+										<Text>{el.name}</Text>
+									</Link>
+								))}
+								<select
+									style={{
+										display: "flex",
+										alignItems: "center",
+										justifyContent: "center",
+										textAlign: "center",
+										appearance: "none",
+										background:"none",
+									}}
+									value={selectedService}
+									onChange={(event) => {
+										const selectedId = event.target.value;
+										setSelectedService(selectedId);
+										if (selectedId) {
+											router.push(`/${selectedId}`);
+											closeMenu();
+										}
+									}}>
+									{!selectedService && (
+										<option style={{ display: "flex" }} value="" disabled>
+											Услуги
+										</option>
+									)}
+									{services_data.map((service) => (
+										<option
+											style={{ color: "black" }}
+											key={service.id}
+											value={service.id}
+											onClick={closeMenu}>
+											{service.title}
+										</option>
+									))}
+								</select>
 
-										 
-										</Flex>
-									);
-								}
-
-							 
-							})}
+								{nav.slice(3, 6).map((el, index) => (
+									<Link onClick={() => closeMenu()} key={index} href={el.path}>
+										<Text>{el.name}</Text>
+									</Link>
+								))}
+							</Flex>
 
 							<Flex alignItems="center" justifyContent="center" gap={2}>
 								{links.map((el, index) => (
@@ -282,8 +288,6 @@ const Header = () => {
 								</Link>
 							</Flex>
 						</Flex>
-
-
 					</Flex>
 
 					<Box display={{ md: "flex", base: "none" }}>
