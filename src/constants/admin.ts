@@ -5,7 +5,7 @@ export const WHATSAPP_NUMBER = PHONE_NUMBER
 export const EMAIL_ADDRESS = 'info@zerowaste.kg'
 export const INSTAGRAM = 'zerowaste_kgz'
 
-export const LOCATION = 'Кыргызская Республика, ул. Тоголок Молдо 60а, офис 106а  '
+export const LOCATION = 'Кыргызская Республика, ул. Садовая улица, 79 Маевка с.'
 
 /// links
 
@@ -20,6 +20,6 @@ export const TIKTOK_LINK = `https://www.tiktok.com/@zero_waste.kgz`
 export const TELEGRAM_LINK = `https://t.me/+996999001199`
 
 
-export const LOCATION_LINK = 'https://2gis.kg/bishkek/firm/70000001067675181?m=74.595853%2C42.882645%2F20'
+export const LOCATION_LINK = 'https://go.2gis.com/7kh4q'
 
 export const MOTION_WEB_LINK = 'https://www.motionweb.kg/'
