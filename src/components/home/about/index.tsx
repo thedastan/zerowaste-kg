@@ -8,7 +8,7 @@ import Link from "next/link";
 const About = () => {
 	const data = [
 		{
-			text: "Используем только высококачественный российский пищевой полипропилен",
+			text: "Используем и изготавливаем только высококачественные оборудования",
 		},
 		{
 			text: "Немецкие и японские комплектующие и швейцарские инструменты",
@@ -18,7 +18,7 @@ const About = () => {
 		},
 	];
 	return (
-		<Box  id="about">
+		<Box id="about">
 			<Box className="container2">
 				<Flex
 					flexDirection={{ base: "column", md: "row" }}
@@ -59,19 +59,20 @@ const About = () => {
 								</Flex>
 							))}
 						</Flex>
-						 <Link href={"#contact"}>
-						 <Button
-							mt={8}
-							w={330}
-							h="60px"
-							borderRadius={50}
-							bg="#0E6B56"
-							color="white">
-							Оставить заявку
-						</Button></Link>
+						<Link href={"#contact"}>
+							<Button
+								mt={8}
+								w={330}
+								h="60px"
+								borderRadius={50}
+								bg="#0E6B56"
+								color="white">
+								Оставить заявку
+							</Button>
+						</Link>
 					</Box>
-					<Box
-					data-aos="fade-up-left"
+					{/* <Box
+						data-aos="fade-up-left"
 						textAlign="center"
 						borderRadius="17px"
 						p={3}
@@ -93,7 +94,7 @@ const About = () => {
 						<Text fontSize={14} fontWeight={600}>
 							”Zero Waste”
 						</Text>
-					</Box>
+					</Box> */}
 				</Flex>
 			</Box>
 		</Box>
