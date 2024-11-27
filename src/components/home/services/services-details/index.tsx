@@ -232,19 +232,34 @@ const ServicesDetails = () => {
 					<Box>
 						{finds.text.map((textItem, index) => (
 							<Box key={index} mb={4}>
-								<Text data-aos="fade-left" data-aos-delay="300" fontSize={{ base: 24, md: 36 }} fontWeight="600" mb={2}>
+								<Text
+									data-aos="fade-left"
+									data-aos-delay="300"
+									fontSize={{ base: 24, md: 36 }}
+									fontWeight="600"
+									mb={2}>
 									{textItem.bold}
 								</Text>
 
 								{textItem.description.map((descItem, descIndex) => (
 									<Box key={descIndex} mb={4}>
-										<Text data-aos="fade-left"  textIndent="1.5em"  data-aos-delay="400" color="#556172" fontSize={18} fontWeight="400" mb={2}>
+										<Text
+											data-aos="fade-left"
+											data-aos-delay="400"
+											color="#556172"
+											fontSize={18}
+											fontWeight="400"
+											mb={2}>
 											{descItem.desc}
 										</Text>
 
 										<Box>
 											{descItem.lists?.map((listItem, listIndex) => (
-												<Box data-aos="fade-left" data-aos-delay="500" key={listIndex} pl={4}>
+												<Box
+													data-aos="fade-left"
+													data-aos-delay="500"
+													key={listIndex}
+													pl={4}>
 													<Text color="#556172" fontSize={18} fontWeight="400">
 														• {listItem.list}
 													</Text>
@@ -256,7 +271,6 @@ const ServicesDetails = () => {
 							</Box>
 						))}
 					</Box>
-					 
 				</Flex>
 			</Box>
 		</Box>

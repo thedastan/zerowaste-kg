@@ -77,14 +77,14 @@ const About = () => {
 								</Button>
 							</Link>
 						</Box>
-						<Flex paddingRight={{ base: 0, md: 20}} justifyContent="center" mt={{ base: 10, md: 0}} flexDir="column"  >
-							<Box w={{ base: "100%", md: 240 }} h="100%">
+						<Flex alignItems="center" paddingRight={{ base: 0, md: 20}} justifyContent="center" mt={{ base: 10, md: 0}} flexDir="column"  >
+							<Flex justifyContent="center" alignItems="center" w={{ base: "100%", md: 240 }} h="100%">
 								<Image
-									style={{ width: "240px", height: "240px" }}
+									style={{ width: "100px", height: "100px" }}
 									src={logo}
 									alt="img"
 								/>
-							</Box>
+							</Flex>
 
 							<Box w={{ base: "100%", md: 240 }} h="100%">
 								<Image
@@ -95,30 +95,7 @@ const About = () => {
 							</Box>
 						</Flex>
 					</Flex>
-					{/* <Box
-						data-aos="fade-up-left"
-						textAlign="center"
-						borderRadius="17px"
-						p={3}
-						w={{ base: "100%", md: 426 }}
-						bg="#ECF4F2">
-						<Box w={{ base: "100%", md: 340 }} h={340} overflow="hidden">
-							<Image
-								style={{ width: "100%", height: "100%", objectFit: "cover" }}
-								src={ava}
-								alt="img"
-							/>
-						</Box>
-						<Text mt={4} fontSize={22} fontWeight={600}>
-							Максатбек Амангелдиев
-						</Text>
-						<Text mt={2} fontSize={14} fontWeight={300}>
-							Основатель и Ген.Директор
-						</Text>
-						<Text fontSize={14} fontWeight={600}>
-							”Zero Waste”
-						</Text>
-					</Box> */}
+					 
 				</Flex>
 			</Box>
 		</Box>
