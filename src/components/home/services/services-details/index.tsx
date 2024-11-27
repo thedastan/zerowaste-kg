@@ -15,7 +15,6 @@ const ServicesDetails = () => {
 	const { services_data } = useServicesData();
 	const sliderRef = useRef<Slider | null>(null);
 	const sliderRef2 = useRef<Slider | null>(null);
- 
 
 	const settings = {
 		dots: true,
@@ -58,7 +57,7 @@ const ServicesDetails = () => {
 	if (!finds) {
 		return <Text>Сервис не найден</Text>; // Early return after hooks are defined
 	}
- 
+
 	return (
 		<Box>
 			<Box position="relative" bg="#ECF0F4" w="100%" h="100%">
@@ -239,7 +238,7 @@ const ServicesDetails = () => {
 
 								{textItem.description.map((descItem, descIndex) => (
 									<Box key={descIndex} mb={4}>
-										<Text data-aos="fade-left" data-aos-delay="400" color="#556172" fontSize={18} fontWeight="400" mb={2}>
+										<Text data-aos="fade-left"  textIndent="1.5em"  data-aos-delay="400" color="#556172" fontSize={18} fontWeight="400" mb={2}>
 											{descItem.desc}
 										</Text>
 
@@ -257,6 +256,7 @@ const ServicesDetails = () => {
 							</Box>
 						))}
 					</Box>
+					 
 				</Flex>
 			</Box>
 		</Box>
