@@ -52,6 +52,8 @@ const MapWith2GIS: React.FC = () => {
   }, []);
 
   return <Box id="map" w="100%" h="320px" border="1px solid #EBEBEB" />;
+
+  
 };
 
 export default MapWith2GIS;
