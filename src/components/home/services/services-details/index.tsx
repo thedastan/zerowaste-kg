@@ -10,8 +10,8 @@ import Image from "next/image";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import Card from "./card";
 
-const ServicesDetails = () => {
-	const { id } = useParams();
+const ServicesDetails = ({ id }: { id: string }) => {
+	// const { id } = useParams();
 	const { services_data } = useServicesData();
 	const sliderRef = useRef<Slider | null>(null);
 	const sliderRef2 = useRef<Slider | null>(null);

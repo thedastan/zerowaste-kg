@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.scss";
 import Providers from "./provider";
-import { SITE_NAME } from "@/constants/seo/seo.constants";
+import { SEO_DESCRIPTION, SITE_NAME } from "@/constants/seo/seo.constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 		default: SITE_NAME,
 		template: `%s | ${SITE_NAME}`
 	},
-	description: 'The movie “Kurak” is stories of violence, denial of womens rights and freedoms, based on real events'
+	description: SEO_DESCRIPTION
 
 };
 
