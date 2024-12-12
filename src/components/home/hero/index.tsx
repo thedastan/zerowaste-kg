@@ -9,6 +9,8 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { GoArrowRight } from "react-icons/go";
 
+import imgbg from "@/assets/img/hero.png"
+
 const Hero = () => {
 	const { services_data } = useServicesData();
 	const router = useRouter();
@@ -154,7 +156,7 @@ const Hero = () => {
 						overflow="hidden">
 						<Image
 							style={{ width: "100%", height: "100%", objectFit: "cover" }}
-							src={img}
+							src={imgbg}
 							alt="img"
 						/>
 					</Box>
@@ -167,7 +169,7 @@ const Hero = () => {
 					h="180px">
 					<Image
 						style={{ width: "100%", height: "100%", objectFit: "cover" }}
-						src={img}
+						src={imgbg}
 						alt="img"
 					/>
 				</Box>
