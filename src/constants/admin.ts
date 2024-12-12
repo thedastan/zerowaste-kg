@@ -1,4 +1,6 @@
 export const PHONE_NUMBER = '+996 999 001 199'
+export const PHONE_NUMBER_active = '+996999001199'
+
 
 export const WHATSAPP_NUMBER = PHONE_NUMBER
 
@@ -9,7 +11,7 @@ export const LOCATION = 'Кыргызская Республика, ул. Сад
 
 /// links
 
-export const WHATSAPP_LINK = `https://wa.me/${PHONE_NUMBER}`
+export const WHATSAPP_LINK = `https://wa.me/${PHONE_NUMBER_active}`
 
 export const EMAIL_ADDRESS_LINK = `mailto:${EMAIL_ADDRESS}`
 

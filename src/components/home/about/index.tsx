@@ -10,14 +10,15 @@ import text from "@/assets/img/abouttext.png";
 const About = () => {
 	const data = [
 		{
-			text: "Используем и изготавливаем только высококачественные оборудования",
+			text: "Используем и изготавливаем только высококачественное оборудование.",
 		},
 		{
-			text: "Немецкие и японские комплектующие и швейцарские инструменты",
+			text: "Немецкие и японские комплектующие, а также швейцарские инструменты.",
 		},
 		{
-			text: "Наши специалисты имеют многолетний опыт работы в зарубежных крупных компаниях",
+			text: "Наши специалисты имеют многолетний опыт работы в крупных зарубежных компаниях.",
 		},
+		
 	];
 	return (
 		<Box id="about">
@@ -46,8 +47,8 @@ const About = () => {
 								fontSize={18}
 								fontWeight={400}>
 								Наша компания с 2014 года занимается производством и установкой
-								комплексных инженерных сооружении в Кыргызстане, а также в
-								странах СНГ и Персидского Залива.
+								комплексных инженерных сооружений в Кыргызстане, а также в
+								странах СНГ и Персидского залива.
 							</Text>
 							<Flex mt={6} flexDirection="column" gap={6}>
 								{data.map((el, index) => (
@@ -77,8 +78,17 @@ const About = () => {
 								</Button>
 							</Link>
 						</Box>
-						<Flex alignItems="center" paddingRight={{ base: 0, md: 20}} justifyContent="center" mt={{ base: 10, md: 0}} flexDir="column"  >
-							<Flex justifyContent="center" alignItems="center" w={{ base: "100%", md: 240 }} h="100%">
+						<Flex
+							alignItems="center"
+							paddingRight={{ base: 0, md: 20 }}
+							justifyContent="center"
+							mt={{ base: 10, md: 0 }}
+							flexDir="column">
+							<Flex
+								justifyContent="center"
+								alignItems="center"
+								w={{ base: "100%", md: 240 }}
+								h="100%">
 								<Image
 									style={{ width: "100px", height: "100px" }}
 									src={logo}
@@ -95,7 +105,6 @@ const About = () => {
 							</Box>
 						</Flex>
 					</Flex>
-					 
 				</Flex>
 			</Box>
 		</Box>

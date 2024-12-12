@@ -40,32 +40,27 @@ const Works = () => {
 						xl: `${(clientWidth - parseInt(CONTAINER_WIDTH)) / 2 + 16}px`,
 						base: "4",
 					}}
-					h={{ md: "450px", base: "550px" }}>
+					h={{ md: "100%", base: "550px" }}>
 					{data_works.map((el, index) => (
 						<Flex
 							key={index}
 							flexDirection="column"
 							justifyContent={{ base: "space-between", md: "space-between" }}
 							w={{ base: "350px", md: "602px" }}
-							h={{ base: "500px", md: "424px" }}
+							h={{ base: "500px", md: "464px" }}
 							bg="#CCD2C8B2"
 							borderRadius={10}
 							flexShrink={0}
 							flexGrow={0}
 							backdropFilter="blur(5px)">
 							<Box p={4}>
-								{/* <Text
+								<Text
 									lineHeight={{ base: "30px", md: "40px" }}
 									fontSize={{ base: 24, md: 36 }}
 									fontWeight={{ base: 500, md: 500 }}>
 									{el.title}
-								</Text> */}
-								 <Image
-										width={118}
-										height={68}
-										src={img}
-										alt="Контакт-логотип"
-									/>
+								</Text>
+								 
 								<Text color="#4e4e4e" mt={4} fontSize={16} fontWeight={400}>
 									{" "}
 									<span style={{ fontWeight: "700" }}>Описание: </span>{" "}
@@ -90,7 +85,7 @@ const Works = () => {
 									p={{ base: "6px 0px", md: "6px 15px" }}>
 									<Text>{el.location}</Text>
 								</Flex>
-								<Box w={{ base: "100%", md: 280 }} h="155px" overflow="hidden">
+								<Box w={{ base: "100%", md: 280 }} borderRadius={3} h="170px" overflow="hidden">
 									<Image
 										style={{
 											width: "100%",

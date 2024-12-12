@@ -25,7 +25,7 @@ const Partners = () => {
 		<Box display={{ base: "none", md: "flex" }} py={20}>
 			<Box className="container" >
 				<Text textAlign="center" py={4} fontSize={52} fontWeight={600}>
-					Партнеры
+					Наши клиенты
 				</Text>
 			 
 				<Flex
