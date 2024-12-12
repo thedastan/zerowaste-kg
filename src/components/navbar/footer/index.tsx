@@ -14,7 +14,7 @@ const Footer = () => {
       {/* WhatsApp Link Button */}
       <Link href={WHATSAPP_LINK} target="_blank">
         <Text
-          zIndex={1}
+          zIndex={10}
           boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
           position="fixed"
           bottom={{ lg: "60px", base: "5px" }}
