@@ -67,11 +67,12 @@ const Works = () => {
 									{el.desc}
 								</Text>
 								<Text color="#4e4e4e" mt={4} fontSize={16} fontWeight={400}>
-									{" "}
-									<span style={{ fontWeight: "700" }}>
-										Производительность: 
-									</span>{" "}
-									{el.product}
+ 								 {el.product ? (
+								    <>
+      								<span style={{ fontWeight: "700" }}>Производительность: </span>
+      								{el.product}
+   									 </>
+  									) : null}
 								</Text>
 							</Box>
 							<Flex
