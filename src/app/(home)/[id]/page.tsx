@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 			? "ЕМКОСТИ для жидкостей"
 			: id === "5"
 			? "Рыбные хозяйства"
-			: "ZeroWaste";
+			: "Zero Waste";
 	const description =
 		id === "1"
 			? "Крытые и открытые плавательные бассейны любой формы и размеров из Полипропилена и ПВХ пленки"
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 			? "Нестандартные емкости для питьевой воды, молока и других пищевых и непищевых жидкостей"
 			: id === "5"
 			? "Инкубационные цеха для рыбы, Установка замкнутого водоснабжения (УЗВ)"
-			: "ZeroWaste";
+			: "Zero Waste";
 	return {
 		title,
 		description,

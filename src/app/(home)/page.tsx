@@ -5,13 +5,13 @@ import Head from "next/head";
 import React from "react";
 
 export const metadata: Metadata = {
-	title: "ZeroWaste",
+	title: "Зеро Вест",
 	description:
 		"Очистные сооружения, бассейны, жироуловители, емкости для жидкостей",
 	keywords:
 		"очистные сооружения, плавательный бассейн, полипропилен, емкости, бишкек, кыргызстан, нарын, ош, ыссык-куль, талас, джалал-абад, чуй, чолпон-ата, баткен",
 	robots: "index, follow",
-	authors: [{ name: "ОсОО Металломир" }],
+	authors: [{ name: "ОсОО Зеро Вест" }],
 	// ...NO_INDEX_PAGE,
 };
 
@@ -19,7 +19,7 @@ const Home = () => {
 	return (
 		<>
 			<Head>
-				<meta name="author" content="Экологичнее с ZeroWaste!" />
+				<meta name="author" content="Экологичнее с Zero Waste!" />
 
 				<meta
 					name="description"
@@ -39,7 +39,7 @@ const Home = () => {
 				/>
 				<meta
 					property="og:title"
-					content="очистные сооружения - zerowaste.kg"
+					content="очистные сооружения - в Бишкеке"
 				/>
 				<meta
 					property="og:description"
