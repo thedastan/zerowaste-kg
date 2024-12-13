@@ -31,7 +31,7 @@ const About = () => {
 						justifyContent={{ base: "center", md: "space-between" }}
 						alignItems="center"
 						w="100%"
-						data-aos="fade-up-right"
+						data-aos="fade-up"
 						p={{ base: "40px 15px", md: "40px 50px" }}
 						borderRadius="17px"
 						bg="#191919"

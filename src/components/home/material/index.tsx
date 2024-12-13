@@ -56,7 +56,7 @@ const Material = () => {
 				<Flex
 					flexDirection={{ base: "column", md: "row" }}
 					justifyContent="space-between">
-					<Box data-aos="fade-up-right" w={{ base: "100%", md: 680 }}>
+					<Box data-aos="fade-up" w={{ base: "100%", md: 680 }}>
 						<Box h={{ base: "100%", md: "150px" }}>
 							<Text
 								position={{ base: "relative", md: "absolute" }}
@@ -85,7 +85,7 @@ const Material = () => {
 						</Box>
 
 						<Box
-							data-aos="fade-up-right"
+							data-aos="fade-up"
 							display={{ base: "none", md: "flex" }}
 							mt={7}
 							gap={2}

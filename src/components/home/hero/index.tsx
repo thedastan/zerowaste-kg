@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { GoArrowRight } from "react-icons/go";
 
-import imgbg from "@/assets/img/hero.png"
+import imgbg from "@/assets/img/hero-transformed.png"
 
 const Hero = () => {
 	const { services_data } = useServicesData();
