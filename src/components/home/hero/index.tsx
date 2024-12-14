@@ -76,7 +76,7 @@ const Hero = () => {
 						/>
 
 						{services_data
-							.slice(0, 1)
+							.slice(1, 2)
 							.concat(services_data.slice(3, 4), services_data.slice(4, 5))
 							.map((el, index) => (
 								<>
@@ -111,7 +111,7 @@ const Hero = () => {
 											justifyContent="space-between"
 											alignItems="start"
 											color="white">
-											<Text fontSize={22} fontWeight={400}>
+											<Text fontSize={20} fontWeight={400}>
 												{el.title}
 											</Text>
 											<Flex gap={2} justifyContent="center" alignItems="center">
