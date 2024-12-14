@@ -138,10 +138,10 @@ export const useServicesData = () => {
 					img: card1_img5,
 				},
 				{
-					img: card1_img7,
+					img: card1_img1,
 				},
 				{
-					img: card1_img1,
+					img: card1_img7,
 				},
 				{
 					img: card1_img8,
