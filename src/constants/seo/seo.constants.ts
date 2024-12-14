@@ -1,5 +1,5 @@
 export const NO_INDEX_PAGE = { robots: { index: false, follow: false } }
-export const SITE_NAME = 'zerowaste.kg'
+export const SITE_NAME = 'Создаем экологичные инженерные сооружения для будущего'
 
 export const SEO_DESCRIPTION="Очистные сооружения, бассейны, жироуловители, емкости для жидкостей"
 
