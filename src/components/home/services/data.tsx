@@ -123,7 +123,7 @@ export const useServicesData = () => {
 			cart_desc: "Стационарные и мобильные ЛОС для предприятий и населенных пунктов любой формы и производительности",
 			image: [
 				{
-					img: card1_img1,
+					img: card1_img6,
 				},
 				{
 					img: card1_img2,
@@ -138,7 +138,7 @@ export const useServicesData = () => {
 					img: card1_img5,
 				},
 				{
-					img: card1_img6,
+					img: card1_img1,
 				},
 				{
 					img: card1_img7,
